@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YostYang — China Go-to-Market Studio</title>
+<meta name="description" content="A solo China go-to-market studio helping overseas software products grow Chinese users through content and KOC marketing — not paid ads.">
+<style>
+  :root { --ink:#16181d; --sub:#5c6470; --accent:#c2410c; --bg:#fafaf8; --card:#ffffff; --line:#e7e5e0; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:-apple-system,"Helvetica Neue","PingFang SC",Arial,sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; }
+  .wrap { max-width:880px; margin:0 auto; padding:0 24px; }
+  header { padding:26px 0; display:flex; justify-content:space-between; align-items:center; }
+  .logo { font-weight:800; letter-spacing:.02em; }
+  .logo span { color:var(--accent); }
+  header a.btn { font-size:14px; }
+  .hero { padding:56px 0 48px; }
+  .avatar-row { display:flex; align-items:center; gap:14px; margin-bottom:18px; }
+  .avatar { width:72px; height:72px; border-radius:50%; object-fit:cover; border:2.5px solid var(--ink); background:#fff; }
+  .avatar-fallback { width:72px; height:72px; border-radius:50%; border:2.5px solid var(--ink); background:var(--ink); color:#fff; display:none; align-items:center; justify-content:center; font-weight:800; font-size:28px; }
+  .avatar-row .who { font-size:14px; color:var(--sub); }
+  .avatar-row .who strong { color:var(--ink); font-size:15px; display:block; }
+  .kicker { display:inline-block; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); font-weight:700; margin-bottom:16px; }
+  h1 { font-size:clamp(30px,5vw,46px); line-height:1.15; letter-spacing:-.02em; margin-bottom:18px; }
+  .hero p { font-size:18px; color:var(--sub); max-width:640px; margin-bottom:28px; }
+  .btn { display:inline-block; background:var(--ink); color:#fff; text-decoration:none; padding:12px 22px; border-radius:8px; font-weight:600; }
+  .btn.ghost { background:transparent; color:var(--ink); border:1.5px solid var(--ink); margin-left:10px; }
+  .btn:hover { opacity:.85; }
+  section { padding:44px 0; border-top:1px solid var(--line); }
+  h2 { font-size:22px; margin-bottom:20px; letter-spacing:-.01em; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:22px; }
+  .card h3 { font-size:16px; margin-bottom:8px; }
+  .card p { font-size:14px; color:var(--sub); }
+  .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:16px; margin-top:8px; }
+  .stat { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px; text-align:center; }
+  .stat .v { font-size:26px; font-weight:800; color:var(--accent); }
+  .stat .l { font-size:12.5px; color:var(--sub); margin-top:4px; }
+  .eagle-note { font-size:14px; color:var(--sub); margin-top:14px; }
+  .steps { counter-reset:step; }
+  .step { display:flex; gap:16px; padding:14px 0; border-bottom:1px dashed var(--line); }
+  .step:last-child { border-bottom:none; }
+  .step .n { counter-increment:step; flex:0 0 34px; height:34px; border-radius:50%; background:var(--ink); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:14px; }
+  .step .n::before { content:counter(step); }
+  .step h3 { font-size:15.5px; margin-bottom:2px; }
+  .step p { font-size:14px; color:var(--sub); }
+  .snapshot { background:var(--ink); color:#fff; border-radius:16px; padding:34px 28px; margin-top:8px; }
+  .snapshot h2 { color:#fff; }
+  .snapshot p { color:#c9ced6; max-width:600px; margin-bottom:22px; font-size:15.5px; }
+  .snapshot .btn { background:var(--accent); }
+  footer { padding:36px 0 48px; border-top:1px solid var(--line); font-size:14px; color:var(--sub); display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:space-between; }
+  footer a { color:var(--ink); text-decoration:none; font-weight:600; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="logo">YostYang<span>.</span> <small style="font-weight:500;color:var(--sub)">China Go-to-Market Studio</small></div>
+    <a class="btn" href="mailto:jiuling.yost@gmail.com">Get a free China Snapshot</a>
+  </header>
+
+  <div class="hero">
+    <div class="avatar-row">
+      <img class="avatar" src="avatar.png" alt="YostYang" style="display:none" onload="this.style.display='block';this.nextElementSibling.style.display='none';">
+      <svg class="avatar" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="YostYang avatar">
+        <circle cx="100" cy="100" r="100" fill="#f0ece6"/>
+        <!-- neck -->
+        <path d="M85 126 L85 152 L115 152 L115 126 Z" fill="#f6c49e" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
+        <!-- shirt -->
+        <path d="M22 200 C26 170 50 152 80 148 C86 157 114 157 120 148 C150 152 174 170 178 200 Z" fill="#141414" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
+        <!-- ears -->
+        <ellipse cx="59" cy="98" rx="8" ry="12" fill="#f6c49e" stroke="#111" stroke-width="4"/>
+        <ellipse cx="141" cy="98" rx="8" ry="12" fill="#f6c49e" stroke="#111" stroke-width="4"/>
+        <!-- face: longer oval, more forehead -->
+        <path d="M64 84 C64 52 80 38 100 38 C120 38 136 52 136 84 C136 112 122 138 100 138 C78 138 64 112 64 84 Z" fill="#f6c49e" stroke="#111" stroke-width="4"/>
+        <!-- temple fade (dark gray) -->
+        <path d="M64 78 C64 62 70 52 78 47 L78 60 C72 64 66 70 64 78 Z" fill="#4a4a4a"/>
+        <path d="M136 78 C136 62 130 52 122 47 L122 60 C128 64 134 70 136 78 Z" fill="#4a4a4a"/>
+        <!-- hair: short crop, high hairline -->
+        <path d="M63 76 C60 46 78 32 100 32 C122 32 140 46 137 76 C136 64 130 56 122 53 C120 58 118 60 116 58 C112 53 106 51 100 51 C88 51 76 54 70 62 C66 66 64 70 63 76 Z" fill="#151515" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+        <!-- brows -->
+        <path d="M72 82 C78 78 88 78 93 80" fill="none" stroke="#111" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M107 80 C112 78 122 78 128 82" fill="none" stroke="#111" stroke-width="3.5" stroke-linecap="round"/>
+        <!-- eyes -->
+        <circle cx="82" cy="92" r="3.4" fill="#111"/>
+        <circle cx="118" cy="92" r="3.4" fill="#111"/>
+        <!-- nose: line hooking left -->
+        <path d="M102 84 C103 94 104 102 103 106 C102 109 98 109 96 107" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+        <!-- mouth: subtle -->
+        <path d="M89 120 C95 122 105 122 111 120" fill="none" stroke="#111" stroke-width="3.5" stroke-linecap="round"/>
+      </svg>
+      <div class="who"><strong>YostYang</strong>Founder, China Go-to-Market Studio</div>
+    </div>
+    <span class="kicker">For overseas software teams</span>
+    <h1>Your product is already being discussed in China.<br>Nobody's answering.</h1>
+    <p>I'm YostYang — a solo China go-to-market studio. I help overseas AI, Mac and productivity tools grow Chinese users through <strong>content and KOC creators</strong>, not paid ads. You talk directly to the person doing the work.</p>
+    <a class="btn" href="mailto:jiuling.yost@gmail.com?subject=Free%20China%20Snapshot">Request a free Snapshot</a>
+    <a class="btn ghost" href="#work">See the Eagle case</a>
+  </div>
+
+  <section>
+    <h2>Why China works differently</h2>
+    <div class="grid">
+      <div class="card"><h3>Search engine ≠ Google</h3><p>Chinese users discover tools on <strong>Xiaohongshu</strong> (~300M users), Bilibili and Douyin — content platforms where trusted voices, not ads, drive adoption.</p></div>
+      <div class="card"><h3>Interest leaks without you</h3><p>Reviews, tutorials and questions about overseas tools appear organically. With no official presence, that interest drifts to local competitors — or cracked copies.</p></div>
+      <div class="card"><h3>Content compounds</h3><p>A well-seeded tutorial keeps ranking in Xiaohongshu search for years. Organic content is durable in a way paid placement never is.</p></div>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2>Track record — Eagle (<a href="https://eagle.cool" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">eagle.cool</a>)</h2>
+    <div class="stats">
+      <div class="stat"><div class="v">100K → 5M+</div><div class="l">China topic views</div></div>
+      <div class="stat"><div class="v">64</div><div class="l">localized content pieces</div></div>
+      <div class="stat"><div class="v">150+</div><div class="l">creators / KOCs activated</div></div>
+      <div class="stat"><div class="v">2+ yrs</div><div class="l">sustained growth, zero ads</div></div>
+    </div>
+    <div class="grid" style="margin-top:16px;">
+      <div class="card"><h3>Official account operations</h3><p>Managed Eagle's official accounts across Chinese social platforms — 64 native pieces: tutorials, case studies, workflow guides and product updates, written for Chinese designers, not translated copy.</p></div>
+      <div class="card"><h3>Topic &amp; search growth</h3><p>Targeted campaigns plus platform-SEO grew topic views from 100K to 5M+ — content that keeps ranking in Xiaohongshu search, and converting, long after publishing.</p></div>
+      <div class="card"><h3>Creator network</h3><p>Sourced and collaborated with 150+ bloggers and KOCs producing reviews, video demos and workflow content — compounding reach beyond official channels.</p></div>
+    </div>
+    <p class="eagle-note">Eagle (<a href="https://eagle.cool" target="_blank" rel="noopener" style="color:var(--ink)">eagle.cool</a>) is a paid, polished Mac design-asset tool — the same audience most overseas Mac / productivity / AI tools want to reach. The playbook transfers.</p>
+  </section>
+
+  <section>
+    <h2>What I offer</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>① KOC amplification</h3>
+        <p>Authentic usage stories and tutorials from Key Opinion Consumers whose audiences match your users — localized video demos, testimonials and workflow content that spreads your product the way China actually discovers software.</p>
+      </div>
+      <div class="card">
+        <h3>② Official account operations</h3>
+        <p>Set up and run your official presence on Xiaohongshu and WeChat — real-time user support, usage tips and localized updates that catch existing interest, convert curiosity into users, and give pirated-copy users a legitimate path back.</p>
+      </div>
+    </div>
+    <p class="eagle-note">Both start small and measurable. The goal is bridging cultural and operational gaps — so your product doesn't just reach Chinese users, it serves them.</p>
+  </section>
+
+  <section>
+    <h2>How we'd work together</h2>
+    <div class="steps">
+      <div class="step"><div class="n"></div><div><h3>Free China Snapshot</h3><p>1–2 pages: what Chinese users already say about your product, whether real demand exists, and one low-risk first step. Yours to keep — no call required.</p></div></div>
+      <div class="step"><div class="n"></div><div><h3>Listen &amp; set up</h3><p>Secure your official presence on Xiaohongshu, map the organic conversation, understand what users ask and where they get stuck.</p></div></div>
+      <div class="step"><div class="n"></div><div><h3>Seed authentic content</h3><p>A small set of credible KOCs publishing honest, localized tutorials and workflows — built to rank in platform search.</p></div></div>
+      <div class="step"><div class="n"></div><div><h3>Measure, then scale</h3><p>Topic views, saves, referral and registration lift. Deeper investment only when the signal says so.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="snapshot">
+      <h2>Start with a free China Snapshot</h2>
+      <p>Send me your product link. I'll send back a 1–2 page snapshot of your existing Chinese footprint and the realistic opportunity — free, no meeting, no obligation.</p>
+      <a class="btn" href="mailto:jiuling.yost@gmail.com?subject=Free%20China%20Snapshot%20for%20[product]">jiuling.yost@gmail.com</a>
+    </div>
+  </section>
+
+  <footer>
+    <div><strong>YostYang</strong> · China Go-to-Market Studio</div>
+    <div><a href="mailto:jiuling.yost@gmail.com">Email</a> · <a href="https://discord.com/users/1050621407589056532" target="_blank" rel="noopener">Discord</a></div>
+  </footer>
+</div>
+
+</body>
+</html>
